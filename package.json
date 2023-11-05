@@ -1,0 +1,34 @@
+{
+  "name": "food-villa-react-app",
+  "version": "1.0.0",
+  "description": "namaste react project app",
+  "scripts": {
+    "start": "set PORT=1000 && parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ankitsinghraj39/food-villa-react-app.git"
+  },
+  "author": "Ankit Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitsinghraj39/food-villa-react-app/issues"
+  },
+  "homepage": "https://github.com/ankitsinghraj39/food-villa-react-app#readme",
+  "keywords": [],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.9.3",
+    "postcss": "^8.4.31",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.5"
+  }
+}

@@ -1,0 +1,5 @@
+# Ignore anode_modules directory
+node_modules/
+
+# Ignore Parcel cache directory
+.parcel-cache/

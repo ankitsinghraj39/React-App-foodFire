@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.flex{
+    display: flex;
+}
+/* ul{
+    list-style-type: none;
+} */
+.header{
+    width: 100vw;
+    /* color: white; */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    /* position: fixed; */
+    z-index: 200;
+    top: 0px;
+
+    & .nav-bar>ul{
+        width: 300px;
+        height: 100%;
+        margin-right: 10px;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .link{
+            color: black;
+        }
+
+        & ls{
+            padding: 100px;
+        }
+    }
+}
+.logo{
+    width: 100px;
+}
+
+.search-container{
+    margin-bottom: 30px;
+    margin-left: 75%;
+}
+
+.body{
+    display: flex;
+    justify-content:space-evenly;
+    margin-inline: 40px;
+    flex-wrap: wrap;
+    position: absolute;
+    /* margin-top: 80px; */
+    & .card{
+        /* min-height: 250px; */
+        max-height: 250px;
+        overflow-y: auto;
+        width: 200px;
+        overflow-wrap:break-word;
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 50px;
+    
+        & img{
+            width: 100%;
+        }
+    }
+    & .shimmer-card{
+        height: 250px;
+        width: 200px;
+        background-color: lightgrey;
+        margin-top: 50px;
+    }
+}
+
+.res-menu{
+    display: flex;
+    justify-content:space-evenly;
+    margin-bottom: 80px;
+    & .res-menu-left{
+        >img{
+            height: 200px;
+        }
+    }
+    & .res-menu-right{
+        >ul{
+            padding-left: 20px;
+        }
+    }
+}
+
+.footer{
+    width: 100vw;
+    height: 40px;
+    color: black;
+    /* background-color: black; */
+    position: fixed;
+    z-index: 200;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* >p{
+        text-align: center;
+    } */
+}

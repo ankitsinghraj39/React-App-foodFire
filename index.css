@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+Normal Native CSS
+    - SCSS 
+    - inline CSS
+    - Component Libraries - Material UI, Base UI, Ant, Chakra
+    - Styled Component
+
+
+Talwind CSS Framework
+    - CSS on the go(in the same file)
+    - reusability
+    - less bundle size 
+    - Flexible UI (Cus)
+*/
+
+
