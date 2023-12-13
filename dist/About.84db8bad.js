@@ -611,23 +611,19 @@ var _profileClass = require("./ProfileClass");
 var _profileClassDefault = parcelHelpers.interopDefault(_profileClass);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-// const About = () => {
-//     return(
-//         <div>
-//             <h1>About Us Page</h1>
-//             <p>
-//                 This is a Food Villa React app. You can order your food by here...
-//                 Thank You.
-//             </p>
-//             <Outlet />
-//             <ProfileClassComp name={"ankit"} id="5436"/>
-//             <ProfileFunctionalComp name={"ankit"} id="5436"/>
-//         </div>
-//     );
-// };
-// export default About;
 //Class Component About
 class About extends (0, _react.Component) {
+    // const [isProfileSectionVisible, setProfileSectionVisibility] = useState(true);
+    // const toggleProfileSection = () => {
+    //     setProfileSectionVisibility(!isProfileSectionVisible);
+    // }
+    // <button onClick={toggleProfileSection}>Toggle Profile Section</button>
+    //   {isProfileSectionVisible && (
+    //     <div className="profile-section">
+    //       {/* Your profile section content goes here */}
+    //       <p>This is the profile section content.</p>
+    //     </div>
+    //   )}
     constructor(props){
         super(props);
     //best place for states bcs constructor automatic calls
@@ -640,25 +636,43 @@ class About extends (0, _react.Component) {
     render() {
         // console.log("Parent(about) - render(class comp)");
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "about-us",
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "font-bold text-4xl",
-                    children: "About Us Page"
-                }, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "about-left font-bold text-4xl",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: "Welcome to The world of Tasty & Fresh Food"
+                        }, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 40,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: '"Better you will feel if you eat a FoodFire healthy meal" You can order your food by here... Thank You.'
+                        }, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 45,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "about-right",
+                            src: "https://foodfire-app.netlify.app/burger-image.ec55d069.png",
+                            alt: "Food Image"
+                        }, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 51,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "src/components/About.js",
-                    lineNumber: 40,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: "This is a Food Villa React app. You can order your food by here... Thank You."
-                }, void 0, false, {
-                    fileName: "src/components/About.js",
-                    lineNumber: 41,
+                    lineNumber: 39,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/components/About.js",
-                    lineNumber: 45,
+                    lineNumber: 57,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileClassDefault.default), {
@@ -666,13 +680,13 @@ class About extends (0, _react.Component) {
                     id: "1234"
                 }, void 0, false, {
                     fileName: "src/components/About.js",
-                    lineNumber: 46,
+                    lineNumber: 58,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/About.js",
-            lineNumber: 39,
+            lineNumber: 38,
             columnNumber: 12
         }, this);
     }
@@ -722,106 +736,87 @@ class Profile extends (0, _reactDefault.default).Component {
     componentWillUnmount() {
         return this.setState.userInfo;
     }
-    // componentDidMount(){
-    //     this.timer = setInterval(()=>{
-    //         console.log("Namaste react(class)");
-    //     },1000);
-    //     console.log("child - component did mount(for setInterval)");
-    // }
-    // componentDidUpdate(prevProps, prevState){
-    //     if(this.state.count != prevState.count){
-    //         //code
-    //     }
-    //     if( this.state.count2 != prevState.count2){
-    //         //code
-    //     }
-    //     console.log("component did update - About");
-    // }
-    // componentWillUnmount(){
-    //     console.log("component will unmount - About");
-    //     clearInterval(this.timer);  //(when component(router) will change)
-    // }
     render() {
         const { count } = this.state;
         const { count2 } = this.state;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex justify-evenly m-20",
+            className: "profile-section m-20",
             children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: "Profile\uD83D\uDC64"
+                }, void 0, false, {
+                    fileName: "src/components/ProfileClass.js",
+                    lineNumber: 37,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "profile",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "profile-img h-40",
+                        src: this.state.userInfo.avatar_url
+                    }, void 0, false, {
+                        fileName: "src/components/ProfileClass.js",
+                        lineNumber: 39,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/ProfileClass.js",
+                    lineNumber: 38,
+                    columnNumber: 17
+                }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            className: " font-medium text-3xl",
-                            children: "Profile (Class Component)"
-                        }, void 0, false, {
-                            fileName: "src/components/ProfileClass.js",
-                            lineNumber: 64,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            className: " font-semibold text-2xl",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "profile-info font-semibold text-2xl",
                             children: [
                                 "Name: ",
                                 this.state.userInfo.name
                             ]
                         }, void 0, true, {
                             fileName: "src/components/ProfileClass.js",
-                            lineNumber: 65,
+                            lineNumber: 42,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: [
                                 "Id: ",
                                 this.state.userInfo.id
                             ]
                         }, void 0, true, {
                             fileName: "src/components/ProfileClass.js",
-                            lineNumber: 66,
+                            lineNumber: 43,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: [
                                 "User Name: ",
                                 this.state.userInfo.login
                             ]
                         }, void 0, true, {
                             fileName: "src/components/ProfileClass.js",
-                            lineNumber: 67,
+                            lineNumber: 44,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: [
                                 "Location: ",
                                 this.state.userInfo.location
                             ]
                         }, void 0, true, {
                             fileName: "src/components/ProfileClass.js",
-                            lineNumber: 68,
+                            lineNumber: 45,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/ProfileClass.js",
-                    lineNumber: 63,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "h-40",
-                        src: this.state.userInfo.avatar_url
-                    }, void 0, false, {
-                        fileName: "src/components/ProfileClass.js",
-                        lineNumber: 71,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/components/ProfileClass.js",
-                    lineNumber: 70,
+                    lineNumber: 41,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/ProfileClass.js",
-            lineNumber: 62,
+            lineNumber: 36,
             columnNumber: 12
         }, this);
     }

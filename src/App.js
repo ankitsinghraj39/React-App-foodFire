@@ -23,7 +23,7 @@ import Shimmer from "./components/Shimmer";
 //On Demand Loading
 //Dynamic Import
 
-const InstaMart = lazy(()=> import("./components/instaMart"));
+const InstaMart = lazy(()=> import("./components/InstaMart"));
 
 //upon on demand loading --> upon render --> suspend Loading
 

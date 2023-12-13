@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../../dist/logo.png';
+import logo from '../../dist/logo1.png';
 import { Link, useLoaderData } from 'react-router-dom';
 import useOnline from '../utils/useOnline';
 import useAuth from '../utils/useAuth';
@@ -9,7 +9,7 @@ const Title=()=>{
 
     return(
       <Link to="/">
-        <img className="h-28 p-2" src={logo} alt="logo"></img>
+        <img className="logo h-28 p-2 rounded-full" src={logo} alt="logo"></img>
       </Link>
     );
   
@@ -26,13 +26,13 @@ const Header_component = () => {
   const isOnline = useOnline();
 
     return(
-      <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 header">
+      <div className=" header flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 ">
         {/* Title import in Header*/}
         <Title/>
         {/* navbar */}
         <div className="nav-bar">
-          <ul className='flex py-10'>
-            <li className='px-2'>
+          <ul className='flex '>
+            <li className=''>
               <Link  className='link' to="/">Home</Link>
             </li>
             <li className='px-2'>
@@ -41,17 +41,19 @@ const Header_component = () => {
             <li className='px-2'>
               <Link  className='link' to="/contact">Contact us</Link>
             </li>
-            <li className='px-2'>Cart</li>
             <li className='px-2'>
-              <Link className='link' to="/instamart">InstaMart</Link>
+              <Link className='link' to="/instamart">🛒</Link>
             </li>
+            {/* <li className='px-2'>
+              <Link className='link' to="/instamart">InstaMart</Link>
+            </li> */}
           </ul>
         </div>
-        <h1>{isOnline ? "online" : "offline"}</h1>
+        {/* <p>{isOnline ? "online" : "offline"}</p> */}
         {isLoggedIn ? (
-          <button color='black' onClick={()=> setIsLoggedIn(false)}>Logout</button> 
+          <button className='login-logout' color='black' onClick={()=> setIsLoggedIn(false)}>Logout</button> 
         ) : (
-          <button color='black' onClick={()=> setIsLoggedIn(true)}>Login</button>
+          <button className='login-logout' color='black' onClick={()=> setIsLoggedIn(true)}>Login</button>
         )}  
       </div>
     );

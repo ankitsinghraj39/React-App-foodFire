@@ -37,7 +37,12 @@ const Body=()=>{
     const isOnline = useOnline();
 
     if(!isOnline){
-        return <h1> You are OFFLINE, Please check your internet connection !!!</h1>
+        return(
+            <div class="offline-message">
+            <h1>You are offline</h1>
+            <p>Please check your internet connection and try again.</p>
+</div>
+        );
     }
 
     //not render component (Early return)
@@ -50,11 +55,11 @@ const Body=()=>{
         <Shimmer /> 
     ) : (
         <>
-            <div className="search-container p-5 bg-pink-50 my-5">
-                <input className="focus:bg-green-50 p-2 m-2 search-input" type="text" placeholder="Search" value={searchInput} onChange={(e) => { setSearchInput(e.target.value); }} />  
+            <div className="search-container">
+                <input className="search-input" type="text" placeholder="Search" value={searchInput} onChange={(e) => { setSearchInput(e.target.value); }} />  
                 {/* e.target.value  --(merans)--> whatever u write in input */}
                 <button 
-                    className="p-2 m-2 bg-purple-900 hover:bg-gray-900 text-white rounded-md search-btn" 
+                    className="search-button" 
                     onClick={()=> {
                         const data = searchFilter(searchInput, allRestaurants); 
                         setFilteredRestaurants(data);
@@ -63,7 +68,7 @@ const Body=()=>{
                 Search
                 </button>
             </div>
-            <div className="flex justify-evenly absolute flex-wrap body">
+            <div className="body flex justify-evenly absolute flex-wrap">
                 { filteredRestaurants.map((res)=>{
                     {/* console.log("res is", res); */}
                     return (

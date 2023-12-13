@@ -2,29 +2,26 @@ import ProfileFunctionalComp from "./Profile";
 import { Outlet } from "react-router-dom";
 import ProfileClassComp from "./ProfileClass";
 import React, {Component} from "react";
-
-// const About = () => {
-//     return(
-//         <div>
-//             <h1>About Us Page</h1>
-//             <p>
-//                 This is a Food Villa React app. You can order your food by here...
-//                 Thank You.
-//             </p>
-//             <Outlet />
-//             <ProfileClassComp name={"ankit"} id="5436"/>
-//             <ProfileFunctionalComp name={"ankit"} id="5436"/>
-//         </div>
-//     );
-// };
-// export default About;
-
-
+import { useState } from "react";
 
 
 //Class Component About
 
 class About extends Component{
+
+    // const [isProfileSectionVisible, setProfileSectionVisibility] = useState(true);
+
+    // const toggleProfileSection = () => {
+    //     setProfileSectionVisibility(!isProfileSectionVisible);
+    // }
+
+    // <button onClick={toggleProfileSection}>Toggle Profile Section</button>
+    //   {isProfileSectionVisible && (
+    //     <div className="profile-section">
+    //       {/* Your profile section content goes here */}
+    //       <p>This is the profile section content.</p>
+    //     </div>
+    //   )}
 
     constructor(props){
         super(props);
@@ -42,16 +39,28 @@ class About extends Component{
     render(){
         // console.log("Parent(about) - render(class comp)");
         return(
-            <div>
-            <h1 className="font-bold text-4xl">About Us Page</h1>
+            <div className="about-us">
+            <div className="about-left font-bold text-4xl">            
+            <h1>
+                Welcome to
+                The world of
+                Tasty & Fresh Food
+            </h1>
             <p>
-                This is a Food Villa React app. You can order your food by here...
+                "Better you will feel if you eat a FoodFire healthy meal"
+                You can order your food by here...
                 Thank You.
             </p>
+
+            <img className="about-right" src="https://foodfire-app.netlify.app/burger-image.ec55d069.png" alt="Food Image"></img>
+            </div>
+
+            {/* <Profile icon to toggle profile section  */}
+            {/* <div className="profile-icon" onclick="toggleProfileSection()">👤</div> */}
+
             <Outlet />
             <ProfileClassComp name={"first Child - class"} id="1234"/>
-            {/* <ProfileClassComp name={"Second Child"} id="6789"/> */}
-            {/* <ProfileFunctionalComp name={"first child - func"} id="5436"/> */}
+            
             </div>
         );
     }
